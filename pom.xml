@@ -95,8 +95,9 @@
                     <artifactId>rewrite-maven-plugin</artifactId>
                     <version>6.26.0</version>
                     <configuration>
-                        <exportDatatables>true</exportDatatables>
                         <configLocation>ci/sanity.yml</configLocation>
+                        <exportDatatables>true</exportDatatables>
+                        <failOnDryRunResults>true</failOnDryRunResults>
                         <activeRecipes>
                             <recipe>org.questdb.openrewrite.SanityCheck</recipe>
                         </activeRecipes>
