@@ -40,16 +40,17 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
           cache: 'maven'
-      - name: Install Apache Maven
-        # Amazon Linux 2 has too old version of Maven, so we need to install a newer one
-        run: |
-          wget https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.6/apache-maven-3.9.6-bin.tar.gz
-          tar xf apache-maven-3.9.6-bin.tar.gz -C /opt
-          ln -sf /opt/apache-maven-3.9.6 /opt/maven
-          echo "MAVEN_HOME=/opt/maven" >> $GITHUB_ENV
-          echo "PATH=/opt/maven/bin:$PATH" >> $GITHUB_ENV
+#      - name: Install Apache Maven
+#        # Amazon Linux 2 has too old version of Maven, so we need to install a newer one
+#        run: |
+#          wget https://repo.maven.apache.org/maven2/org/apache/maven/apache-maven/3.9.6/apache-maven-3.9.6-bin.tar.gz
+#          tar xf apache-maven-3.9.6-bin.tar.gz -C /opt
+#          ln -sf /opt/apache-maven-3.9.6 /opt/maven
+#          echo "MAVEN_HOME=/opt/maven" >> $GITHUB_ENV
+#          echo "PATH=/opt/maven/bin:$PATH" >> $GITHUB_ENV
       - name: Build distribution
-        run: /opt/maven/bin/mvn -B clean install -Dmaven.test.skip=true -Pbuild-binaries -pl 'core'
+        # run: /opt/maven/bin/mvn -B clean install -Dmaven.test.skip=true -Pbuild-binaries -pl 'core'
+        run: ./mvnw -B clean install -Dmaven.test.skip=true -Pbuild-binaries -pl 'core'
         env:
           MAVEN_OPTS: "-XX:+UseParallelGC"
       - name: Unpack distribution
