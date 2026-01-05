@@ -32,11 +32,11 @@
         * Right click on "qdb-build" and select "Execute on"
         * Select "Before Compilation" to enable calling the "qdb-build" target as part of every build.
 
-        In case of build errors, run "mvn package" from the command line manually.
+        In case of build errors, run "./mvnw package" from the command line manually.
 
         You can also run the maven target to build the `qdb-ent` library explicitly:
 
-        mvn -pl core org.questdb:rust-maven-plugin:build@qdb-build
+        ./mvnw -pl core org.questdb:rust-maven-plugin:build@qdb-build
     </description>
 
     <condition property="isWindows">

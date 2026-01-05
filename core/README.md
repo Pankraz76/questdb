@@ -25,7 +25,7 @@ docker push questdb/questdb:6.0.0-linux-amd64
 
 ```script
 java --version
-mvn --version
+./mvnw --version
 ```
 
 ### Maven commands
@@ -35,19 +35,19 @@ nor build the web console:
 
 ```bash
 cd questdb
-mvn clean package -DskipTests
+./mvnw clean package -DskipTests
 ```
 
 To package the web console with the JAR, use the following command:
 
 ```bash
-mvn clean package -DskipTests -P build-web-console
+./mvnw clean package -DskipTests -P build-web-console
 ```
 
 To build executable binaries, use the following command:
 
 ```bash
-mvn clean package -DskipTests -P build-web-console,build-binaries
+./mvnw clean package -DskipTests -P build-web-console,build-binaries
 ```
 
 To run tests, it is not required to have the binaries nor the web console built.
@@ -55,7 +55,7 @@ There are over 4000 tests that should complete within 2-6 minutes depending on
 your system:
 
 ```bash
-mvn clean test
+./mvnw clean test
 ```
 
 To release to Maven Central, use the following command, which activates the
@@ -64,7 +64,7 @@ appropriate username/password for server `central`, and `gnupg` is on hand to
 sign the artefacts.
 
 ```bash
-mvn -pl !benchmarks clean deploy -DskipTests -P build-web-console,maven-central-release
+./mvnw -pl !benchmarks clean deploy -DskipTests -P build-web-console,maven-central-release
 ```
 
 ### Run QuestDB
@@ -73,7 +73,7 @@ To run with the Web Console, you need to rebuild to include the pre-packaged
 `/core/src/main/resources/io/questdb/site/public.zip`.
 
 ```bash
-mvn clean package --batch-mode --quiet -DskipTests -P build-web-console,build-binaries
+./mvnw clean package --batch-mode --quiet -DskipTests -P build-web-console,build-binaries
 ```
 
 Then, create a database root directory and run QuestDb

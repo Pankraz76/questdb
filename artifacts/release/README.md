@@ -21,7 +21,7 @@ git checkout -b v_7_1_1
 ## Clear previous release "memory"
 
 ```bash
-mvn release:clean
+./mvnw release:clean
 ```
 
 ## Perform release
@@ -34,7 +34,7 @@ This step will do the following:
 Note: you will need write access to git repo and maven central.
 
 ```bash
-mvn -B release:prepare release:perform
+./mvnw -B release:prepare release:perform
 ```
 
 Note that `-B` flag will make assumptions about release version. Use it if your release is routine. When releasing
@@ -87,7 +87,7 @@ and uploaded to GH release page
 ```bash
 git fetch --tags
 git checkout tags/7.1.1
-mvn clean package -DskipTests -P build-web-console,build-binaries
+./mvnw clean package -DskipTests -P build-web-console,build-binaries
 ```
 
 ## Release Java Library

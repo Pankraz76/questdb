@@ -109,5 +109,5 @@ java -cp utils.jar io.questdb.cliutil.Table2Ilp -d trades -dilp "https::addr=loc
 To build single jar with dependencies run
 
 ```bash
-mvn clean package
+./mvnw clean package
 ```

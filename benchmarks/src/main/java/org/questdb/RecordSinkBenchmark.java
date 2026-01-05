@@ -74,7 +74,7 @@ import java.util.concurrent.TimeUnit;
  * 3. LOOP - Loop-based interpretation (slowest, handles unlimited columns)
  * <p>
  * Run with:
- * mvn clean package -DskipTests -pl benchmarks -am 2>&1 | tail -3
+ * ./mvnw clean package -DskipTests -pl benchmarks -am 2>&1 | tail -3
  * java -jar benchmarks/target/benchmarks.jar RecordSinkBenchmark 2>&1 | tee /tmp/record_sink_benchmark.txt
  */
 @State(Scope.Benchmark)

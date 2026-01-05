@@ -49,7 +49,7 @@ jobs:
 #          echo "MAVEN_HOME=/opt/maven" >> $GITHUB_ENV
 #          echo "PATH=/opt/maven/bin:$PATH" >> $GITHUB_ENV
       - name: Build distribution
-        # run: /opt/maven/bin/mvn -B clean install -Dmaven.test.skip=true -Pbuild-binaries -pl 'core'
+        # run: /opt/maven/bin/./mvnw -B clean install -Dmaven.test.skip=true -Pbuild-binaries -pl 'core'
         run: ./mvnw -B clean install -Dmaven.test.skip=true -Pbuild-binaries -pl 'core'
         env:
           MAVEN_OPTS: "-XX:+UseParallelGC"

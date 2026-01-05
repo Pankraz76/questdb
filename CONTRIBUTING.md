@@ -95,7 +95,7 @@ You can compile the database and build the web console with the following
 command:
 
 ```bash
-mvn clean package -DskipTests -P build-web-console
+./mvnw clean package -DskipTests -P build-web-console
 ```
 
 You can then run QuestDB with:
@@ -168,19 +168,19 @@ Typical Maven commands:
 - Run full test suite:
 
 ```bash
-mvn test
+./mvnw test
 ```
 
 - Run a specific test class:
 
 ```bash
-mvn -Dtest=ClassNameTest test
+./mvnw -Dtest=ClassNameTest test
 ```
 
 - Run a specific test method:
 
 ```bash
-mvn -Dtest=ClassNameTest#methodName test
+./mvnw -Dtest=ClassNameTest#methodName test
 ```
 
 ## Dependencies
@@ -230,7 +230,7 @@ This means that the web console artifacts are not present in
 simply run:
 
 ```bash
-mvn clean package -DskipTests -P build-web-console
+./mvnw clean package -DskipTests -P build-web-console
 ```
 
 ### Why do some tests fail on Windows?
