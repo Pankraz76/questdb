@@ -98,7 +98,7 @@
                         <exportDatatables>true</exportDatatables>
                         <configLocation>ci/sanity.yml</configLocation>
                         <activeRecipes>
-                            <recipe>org.openrewrite.java.recipes.RecipeTestingBestPractices</recipe>
+                            <recipe>org.questdb.openrewrite.SanityCheck</recipe>
                         </activeRecipes>
                     </configuration>
                     <dependencies>

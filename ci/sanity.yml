@@ -1,5 +1,5 @@
 type: specs.openrewrite.org/v1beta/recipe
-name: org.opensearch.openrewrite.SanityCheck
+name: org.questdb.openrewrite.SanityCheck
 displayName: Apply all Java & Gradle best practices
 description: Comprehensive code quality recipe combining modernization, security, and best practices.
 recipeList:
