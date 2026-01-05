@@ -89,12 +89,12 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>3.1.1</version>
                     <configuration>
-                        <tagNameFormat>@{project.version}</tagNameFormat>
                         <arguments>-Dmaven.test.skipTests=true -Dmaven.test.skip=true</arguments>
                         <releaseProfiles>build-web-console,maven-central-release</releaseProfiles>
                         <scmCommentPrefix>[maven-release-plugin]</scmCommentPrefix>
-                        <scmReleaseCommitComment>[maven-release-plugin] prepare release @{releaseLabel}</scmReleaseCommitComment>
                         <scmDevelopmentCommitComment>[maven-release-plugin] prepare for next development iteration</scmDevelopmentCommitComment>
+                        <scmReleaseCommitComment>[maven-release-plugin] prepare release @{releaseLabel}</scmReleaseCommitComment>
+                        <tagNameFormat>@{project.version}</tagNameFormat>
                     </configuration>
                 </plugin>
                 <plugin>
@@ -121,10 +121,10 @@
         </pluginManagement>
     </build>
     <modules>
-        <module>core</module>
         <module>benchmarks</module>
-        <module>utils</module>
-        <module>examples</module>
         <module>compat</module>
+        <module>core</module>
+        <module>examples</module>
+        <module>utils</module>
     </modules>
 </project>
