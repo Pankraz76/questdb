@@ -15,4 +15,6 @@ jobs:
           java-version: '17'
           cache: 'maven'
       - name: Build distribution
+        run: ./mvnw -B clean install -Dmaven.test.skip=true
+      - name: Rewrite
         run: ./mvnw -B rewrite:dryRun
