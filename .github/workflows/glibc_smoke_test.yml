@@ -94,7 +94,7 @@ jobs:
           java-version: '17'
           cache: 'maven'
       - name: Build distribution
-        run: mvn -B clean install -Dmaven.test.skip=true -Pbuild-binaries -pl '!benchmarks'
+        run: ./mvnw -B clean install -Dmaven.test.skip=true -Pbuild-binaries -pl '!benchmarks'
         env:
           MAVEN_OPTS: "-XX:+UseParallelGC"
       - name: Unpack distribution

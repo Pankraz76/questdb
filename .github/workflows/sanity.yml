@@ -15,4 +15,4 @@ jobs:
           java-version: '17'
           cache: 'maven'
       - name: Build distribution
-        run: mvn -B rewrite:dryRun
+        run: ./mvnw -B rewrite:dryRun
