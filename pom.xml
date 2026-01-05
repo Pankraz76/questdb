@@ -96,6 +96,7 @@
                     <version>6.26.0</version>
                     <configuration>
                         <exportDatatables>true</exportDatatables>
+                        <configLocation>ci/sanity.yml</configLocation>
                         <activeRecipes>
                             <recipe>org.openrewrite.java.recipes.RecipeTestingBestPractices</recipe>
                         </activeRecipes>
