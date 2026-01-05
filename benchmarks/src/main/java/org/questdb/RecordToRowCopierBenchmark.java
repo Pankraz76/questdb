@@ -87,7 +87,7 @@ import java.util.concurrent.TimeUnit;
  * performance from I/O overhead.
  * <p>
  * For forks(1) builds:
- * mvn clean package -DskipTests -pl benchmarks -am 2>&1 | tail -3
+ * ./mvnw clean package -DskipTests -pl benchmarks -am 2>&1 | tail -3
  * java -jar benchmarks/target/benchmarks.jar RecordToRowCopierBenchmark 2>&1 | tee /tmp/benchmark_fallback_test.txt
  * <p>
  * Otherwise, run in IntelliJ.

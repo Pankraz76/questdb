@@ -342,7 +342,7 @@ else ()
     target_link_libraries(questdb rt -Wl,--gc-sections -Wl,--exclude-libs=ALL -static-libgcc _simdjson)
 endif ()
 
-# create output directory in case it does not exist, e.g. after mvn clean
+# create output directory in case it does not exist, e.g. after ./mvnw clean
 add_custom_command(TARGET _simdjson PRE_LINK
         COMMAND ${CMAKE_COMMAND} -E make_directory ${OUTPUT}
 )

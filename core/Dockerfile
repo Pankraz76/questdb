@@ -59,7 +59,7 @@ RUN git clone --depth=1 --progress --branch "${tag_name:-master}" --verbose http
 
 WORKDIR /build/questdb
 
-RUN mvn clean package -Djdk.lang.Process.launchMechanism=vfork -Dmaven.resolver.transport=wagon -Dmaven.wagon.httpconnectionManager.ttlSeconds=30 -DskipTests -P build-web-console,build-binaries
+RUN ./mvnw clean package -Djdk.lang.Process.launchMechanism=vfork -Dmaven.resolver.transport=wagon -Dmaven.wagon.httpconnectionManager.ttlSeconds=30 -DskipTests -P build-web-console,build-binaries
 
 WORKDIR /build/questdb/core/target
 

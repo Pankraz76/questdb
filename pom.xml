@@ -35,6 +35,12 @@
         <url>https://github.com/questdb/questdb</url>
         <tag>9.2.2</tag>
     </scm>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>openrewrite</id>
+            <url>https://repo.openrewrite.org/maven</url>
+        </pluginRepository>
+    </pluginRepositories>
     <build>
         <plugins>
             <plugin>
@@ -112,8 +118,8 @@
                     <dependencies>
                         <dependency>
                             <groupId>org.openrewrite.recipe</groupId>
-                            <artifactId>rewrite-rewrite</artifactId>
-                            <version>0.17.0</version>
+                            <artifactId>rewrite-static-analysis</artifactId>
+                            <version>2.24.0</version>
                         </dependency>
                     </dependencies>
                 </plugin>
